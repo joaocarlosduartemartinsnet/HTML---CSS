@@ -1,0 +1,79 @@
+<table>
+
+    <!-- Tipos uma Legenda -->
+    <caption>Produtos</caption>
+
+
+    <!--cabecario da tabela-->
+    <thead>
+        <tr>
+            <th>Produto:</th>
+            <th>Preco:</th>
+            <th>Qtd:</th>
+            <th>Total:</th>
+        </tr>
+    </thead>
+
+
+    <!--corpo da tabela-->
+    <tbody>
+        <tr>
+            <td>Ipad</td>
+            <td>3279</td>
+            <td>5</td>
+            <td>10189</td>
+        </tr>
+
+        <tr>
+            <td>Cadeira</td>
+            <td>40</td>
+            <td>2</td>
+            <td>80</td>
+        </tr>
+    </tbody>
+
+
+    <!--pé da tabela-->
+    <!-- colspan="quantas colunas irao ser ocupadas" -->
+    <!-- rowspan="quantas linha irao ser ocupadas" -->
+    <tfoot>
+        <tr>
+          <td colspan="3" rowspan="2">Total: </td> 
+          <td>300000</td>
+        </tr>
+    </tfoot>
+
+</table>
+
+
+
+<style>
+    table{
+        border: 3px gray solid;
+        border-collapse: collapse;
+    }
+
+    th, td{
+        padding: 10px;
+
+    }
+
+    thead  tr{
+        border-bottom: 3px solid gray;
+    }
+
+    tbody tr:hover{
+        background-color: #dedede;
+    }
+
+    tfoot{
+        background-color: #444;
+        font-weight: bolder;
+        color: white;
+    }
+
+    
+</style>
+
+
+
