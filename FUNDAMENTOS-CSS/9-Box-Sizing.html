@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Sizing</title>
+
+    <style>
+        *{
+          box-sizing: border-box;
+          /*podemos colocar o 'box-sizing: border-box;' como uma caracteristica geral, para que todos os elementos herdem tal atributo*/
+        }
+       
+        body{
+           font-size: 45px;
+           margin: 0;
+        }
+
+        div{
+          background-color: deepskyblue;
+          width: 100%;
+          height: 300px;
+          padding: 100px;
+          border: solid 20px;
+
+          /*box-sizing: border-box;*/
+
+          /*
+           com os elementos acima estrapola o 100% de largura, pois esta por padrao com 'box-sizing: content-box;'
+           
+           uma forma de solucionar tal problema é:
+             usar o box-sizing: border-box; (tamanho de caixa, ate borda da caixa)
+          */
+        }
+    </style>
+</head>
+<body>
+    <div>
+       o tamanho do Box é....
+    </div>
+</body>
+</html>

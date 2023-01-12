@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Query</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=Dancing+Script:wght@600&display=swap');
+
+        div{
+          font-size: 3em;
+          padding: 20px;
+          margin: 20px;
+          background-color: coral;
+          border: solid 5px #222;
+          font-family: 'Dancing Script';
+          color: white;
+          display: none;
+        }
+
+        @media(max-width:600px){
+            .muito-pequeno{display: block;}
+        }
+
+        /*
+        landscape => paisagem
+        portrait => retrato
+
+
+        quando temos mais de um parenteres vai conciderar um dos dois dependendo do dispositivo que a pag foi aberta
+         isto ->(1) ou  isto ->(2)
+        */
+        @media (max-width:1000px), (orientation: portrait){
+            .pequeno-retrato{ display: block;}
+        }
+
+
+        @media (min-width:500px) and (max-width: 1000px) {
+            .intervalo{display: block;}
+        }
+
+    </style>
+</head>
+<body>
+    <div class="muito-pequeno">muito pequeno</div>
+    <div class="pequeno-retrato">pequeno ou retrato</div>
+    <div class="intervalo">intervalo</div>
+</body>
+</html>

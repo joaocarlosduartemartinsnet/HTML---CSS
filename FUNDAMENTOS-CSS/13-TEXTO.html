@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> CSS Texto </title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@500&display=swap');
+
+        body{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            
+        }
+
+        p{
+            /*valores padroes de '16px'*/
+            font-size: 1em;
+            font-size: 100%;
+            font-size: 16px;
+            font-size: 12pt;
+
+            /*Unidades Absolutas*/
+            font-size: 100px;/*tamanho do pixel e relativo*/
+            font-size: 72pt;/*pontos*/
+            font-size: 1in; /*polegada*/
+
+            /*Unidades Relativas*/
+            font-size: 2.2em; /*pega referencia do pai mais proximo, em relaçao ao 'px'*/
+            font-size: 2.2rem; /*pega referencia da raiz '*{}' em relaçao ao 'px' padrao*/
+            font-size: 50vh;
+            font-size: 10vw;
+
+
+            font-family: monospace;
+            font-family: Georgia, serif;
+            font-family: 'Caveat', sans-serif;
+
+            font-weight: 900;
+            font-style: italic;
+            text-transform: uppercase;
+            /*text-decoration: line-through underline overline;*/
+            word-spacing: 10px; /*espaço entre as palavras*/
+            letter-spacing: 20px; /*espaço entre as letras*/
+            line-height: 1em; /*altura da linha*/
+
+            text-align: center ;/*end(pelo final),left(esquerda),center(centro),right(direita), justify,*/
+        }
+
+        
+
+        .botao{
+            font-size: 28px;
+            text-decoration: none;
+            padding: 10px 30px;
+            border-radius: 25px;
+        }
+
+        .destaque{
+            background-color: red;
+            color: antiquewhite;
+            box-shadow: 2px 3px 5px 3px black;
+        }
+
+        .destaque:active{
+            box-shadow: none;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <p> 
+            que texto <br> legal!
+        </p>
+    </div>
+
+    <a href="#"  target="_blank" class="botao destaque">google</a>
+</body>
+</html>

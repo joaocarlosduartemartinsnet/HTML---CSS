@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POSITION</title>
+    <style>
+        div{
+            font-size: 60px;
+            padding: 30px;
+            border: solid 5px #222;
+        }
+
+        .static{
+            /*nao necessita de position pois e o padrao*/
+            top: 100px;
+            left: 100px;
+            background-color: blue;
+            /*
+             nao ira mudar nada pois ele, 
+             ja esta de acordo com as dimensoes do componente
+            */
+        }
+
+
+        .fixed{
+           position: fixed;
+           bottom: 30px;
+           right: 0px;
+           background-color: tomato;
+        }
+
+        .relative1{
+            /*relative leva em consideraçao o elemento anterior e se posiciona de acordo*/
+            position: relative;
+            left: 20px;
+            top: 5px;
+            background-color: seagreen;
+        }
+
+        .absolute1{
+            /*
+            posiciona-se em relaçao a pagina como um todo por nao estar limitado a algum elemento
+            */
+            position: absolute;
+            left: 350px;
+            top: 120px;
+            background-color: violet;
+        }
+
+
+/*================================================================================*/
+        .relative2{
+            position: relative;
+            left: 250px;
+            top: 2000px;
+            width: 300px;
+            height: 300px;
+            background-color: gray;
+        }
+
+        .absolute2{
+            /*
+            neste caso o 'absolute2' vai se posicionar em relaçao ao elemento pai no case a div com 'relative2'
+            
+            lembramdo que o 'absolute2' so esta realizando esse comportamento graças ao atributo 'relative' na div pai.
+            */
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            width: 30px;
+            height: 30px;
+            background-color: #a53c3c;
+        }
+
+        .sticky{
+            position: -webkit-sticky;/*safari*/
+            position: sticky; 
+            /*fica grudado na tela*/
+            /*bom para utiizar em tabelas e sites de vendas etc...*/
+
+
+            top: 10px;
+
+            background-color: #777;
+        }
+    </style>
+</head>
+<body>
+    <div class="static">Static (PADRÃO)</div>
+    <div class="fixed">Fixed</div>
+    <div class="relative1">Relative</div>
+    <div class="absolute1">Absolute</div>
+
+    <div class="relative2">
+        <div class="absolute2"></div>
+    </div>
+
+    <div class="sticky">sticky</div>
+    <p style="padding-bottom: 2000px;">OPA!</p>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FLEX BOX</title>
+
+    <style>
+        div{
+            border: solid 5px #0029df;
+            font-size: 40px;
+            margin: 5px;
+        }
+
+        .big{
+            font-size: 1.5em;
+        }
+
+        .flex-container{
+            display: flex;
+            /*por padrao o flex-direction é 'row'*/
+
+            /*alem de definir uma orde podemos reverter tambem*/
+            flex-direction: column; /*coluna*/
+            flex-direction: column-reverse; /*coluna inversa*/
+            
+            flex-direction: row-reverse; /*linha inversa*/
+            flex-direction: row; /*linha (padrao)*/
+
+            width: 50%;
+
+            flex-wrap: nowrap; /*sem quebra de linha (padrao)*/
+            flex-wrap: wrap; /*com quebra de linha*/
+            flex-wrap: wrap-reverse; /*quebra de linha inversa*/
+             
+            height: 200px;
+
+            /*flex-flow => junta as propriedades "flex-wrap" e "flex-direction"*/
+            flex-flow: column-reverse wrap; /*coluna inversa com quebra de coluna*/
+            flex-flow: row wrap;
+                     
+         
+            /*alinhamento (content)*/
+            justify-content: flex-start; /*justificar pelo inicio do flex*/
+            justify-content: flex-end; /*justificar pelo final do flex*/
+            justify-content: center; /*justificar pelo centro do flex*/
+            
+            justify-content: space-around; /*cria um espaço uniforme entre cada elemento*/
+            justify-content: space-between; /*cria um espaço entre os elementos*/
+
+
+            /*alinhamento (item)*/
+            height: 400px;
+            justify-items: stretch;/*(padrao)*/
+            justify-items: baseline; /*alinha os itens pelas linhas de base da fonte*/
+            justify-items: flex-start; /*alinha pelo inicio do flex-items*/
+            justify-items: flex-end; /*alinha pelo final do flex-items*/
+            justify-items: center;  /*alinha pelo centro do flex-items*/
+
+
+            align-content: flex-start; /*alinha o conteudo no inicio do flex*/
+            align-content: flex-end; /*alinha o conteudo pelo fim do flex*/
+            align-content: center; /*alinha o conteudo pelo centro do flex*/
+            
+            align-content: space-around; /*alinha o conteudo dando espaco uniforme entre os conteudos no flex*/
+            
+            align-content: space-between;/*alinha o conteudo dando espaço entre conteudos do flex*/
+        }
+    </style>
+
+
+</head>
+<body>
+    <div class="flex-container">
+
+        <div>1</div>
+        <div>2</div>
+        <div class="big">3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+        <div>10</div>
+    </div>
+</body>
+</html>

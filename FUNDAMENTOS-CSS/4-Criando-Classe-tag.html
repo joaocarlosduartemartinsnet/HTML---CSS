@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css - Class</title>
+
+    <style>
+        body{
+            font-size: 40px;
+        }
+        ul,ol{
+            padding: 0;
+        }
+
+        li{
+            margin-left: 60px;
+        }
+
+        .tag{
+            border: 3px solid gray;
+            margin: 5px;
+        }
+
+        .tag label{
+            color: white;
+            font-size: 25px;
+            vertical-align: top;
+            margin-right: 10px;
+            padding: 0px 5px 3px 3px;
+        }
+    </style>
+</head>
+
+
+<body class="tag">
+
+    <div class="tag">
+        <span class="tag">1</span>
+        <span class="tag">2</span>
+        <span class="tag">3</span>
+
+        <p class="tag">4</p>
+
+        <div class="tag noLabel">5</div>
+
+        <ul class="tag">6</ul>
+        
+        <ol class="tag">7</ol>
+
+        <form class="tag" >8</form>
+    </div>
+    
+     
+
+    <script>
+        const colors = {
+            p: '#388e3c',
+            div: '#1565c0',
+            span:'#e53935',
+            section:'#f67809',
+            ul: '#5e35b1',
+            ol: '#fbc02d',
+            header: '#d81b60',
+            nav: '64dd17',
+            main: '#00acc1',
+            footer:'#304ffe',
+            form:'#9f6581',
+            body:'#25b6da',
+            padrao: '#616161',
+
+            get(tag){
+                return this[tag]? this[tag] : this.padrao
+            }
+        }
+
+
+        document.querySelectorAll(".tag").forEach(
+            element => {
+                const nomeDaTag = element.tagName.toLowerCase()
+
+                element.style.borderColor = colors.get(nomeDaTag)
+
+                if(!element.classList.contains('noLabel')){
+                    const label = document.createElement('label')
+
+                    label.style.backgroundColor = colors.get(nomeDaTag)
+
+                    label.innerHTML = nomeDaTag
+
+                    element.insertBefore(label, element.childNodes[0])
+                }
+
+            })
+    </script>
+</body>
+</html>

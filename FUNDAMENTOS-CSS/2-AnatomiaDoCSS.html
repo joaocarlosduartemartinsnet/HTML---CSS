@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anatomia do CSS</title>
+
+    <style>
+        .seletor{
+           color: #fff;
+           font-size: 30px;
+           text-align: center;
+           /*multiplos valores*/
+
+           /*shorthand(curtas) propriedades*/
+           border: solid 5px #001679;
+           font-family: Arial, Helvetica, sans-serif;
+
+           /*funções*/
+           width: calc(100% - 40px);
+           background-color: #7789cf;
+        }
+
+
+        /*usando uma pseudo-class*/
+        .seletor:hover{
+           background-color: #00eeda;
+        }
+
+
+        /*usando um pseudo-elemento*/
+        .seletor::first-letter{
+           color: #02124e;
+           font-size: 60px;
+           font-family: 'Times New Roman', Times, serif;
+           font-weight: bolder;
+        }
+
+        /*
+        
+        PADRÕES DE NOMENCLATURA: 
+
+         => camelCase: É uma convenção de nomenclatura usada por developers para deixar o seu código mais legível para outros DEVs. Através dela você deixa a primeira letra de cada palavra (de um termo composto) em maiúsculo, com exceção do primeiro termo.
+
+         => dash-case – as palavras são separadas por um hífen(-), e tudo é sempre escrito em minúsculo. 
+         
+         */
+    </style>
+</head>
+<body>
+    <h1>Anatomia Do CSS</h1>
+     <div class="seletor">Conteúdo</div>
+</body>
+</html>

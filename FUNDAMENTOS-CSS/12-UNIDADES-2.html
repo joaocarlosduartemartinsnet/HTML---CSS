@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unidades CSS</title>
+
+    <style>
+        .fora{
+            position: relative;
+            background-color: greenyellow;
+            width: 400px;
+            height: 400px;
+            padding: 50px;
+        }
+
+        .dentro{
+           background-color: mediumvioletred;
+           height: 100px;
+           width: 100%;
+
+           position: static;/*position padrao do conteudo*/
+           position: relative; /*conteudo tambem*/
+           /*position: absolute; /*conteudo + padding*/
+           /*position: fixed; /*considera o tamanho do viewport */
+        }
+    </style>
+</head>
+<body>
+    <div class="fora">
+        <div class="dentro">a</div>
+    </div>
+</body>
+</html>

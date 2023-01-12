@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FLEX BOX</title>
+
+    <style>
+        div{
+            border: 5px solid #1475d6;
+            font-size: 40px;
+        }
+
+        .flex-container div{
+            box-sizing: border-box;
+        }
+
+        .flex-container{
+            display: flex;
+            height: 300px;
+            width: 600px;
+
+        }
+
+        /*podemos pegar um elemento especifico para altera-lo*/
+        .flex-container div:nth-child(3){
+                background-color: #b6d40a;
+                 
+                /*elementos de ordem maior sao exibidos por ultimo*/
+                order: 1; /*ordem 1 => ordem maior*/
+                order: 0; /*a ordem padrao do elemento definido pelo html*/
+                order: -1;/*ordem -2 => ordem baixa*/
+
+                align-self: center; /*alinhar-se a si mesmo no centro do flex*/
+                align-self: flex-end;/*alinhar-se a si mesmo no final do flex*/
+                align-self: flex-start;/*alinhar-se a si mesmo no inicion do flex*/
+                align-self: stretch; /*alinhamento (padrao)*/
+
+                
+
+        }
+
+        .flex-container div{
+            width: 100px;
+
+            /*flex-grow => serve para que todos os elemento ocupen de forma uniforme*/
+            flex-grow: 0; /*nenhum cresce*/
+            flex-grow: 1; 
+        }
+
+        .flex-container div:nth-child(1){
+            flex-grow: 2; /*o primeiro filho vai ser maior que os outros*/
+        }
+
+        .flex-container{
+            width: 300px;
+
+            flex-shrink: 1; /* todos os elementos irao encolher uniformemente*/
+        }
+
+        .flex-container div:nth-child(1){
+            flex-shrink: 2; /*ira encolher duas vezes mais*/
+        }
+    </style>
+</head>
+<body>
+    <div class="flex-container">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+    </div>
+</body>
+</html>

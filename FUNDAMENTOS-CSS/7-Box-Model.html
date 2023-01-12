@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Model</title>
+
+    <style>
+        body{font-size: 80px; margin: 0px;}
+        .c1{background-color: orange;}
+        .c2{background-color: skyblue;}
+        .c3{background-color: tomato;}
+
+        div{
+            float: left;
+            padding: 10px 50px 100px 150px;
+            margin: 30px 10px;
+            border: solid 15px black;
+        }
+
+        /*
+         lembrando que pode ocorrer um margin colapse: 
+          nao se preocupe, mas leve isso em concideração nos seus projetos futuros
+          
+          formas de evitar o margin-colapse:
+ 
+           => float: left/right;
+           => display: inline-block;
+           => position: absolute; 
+        */
+    </style>
+</head>
+<body>
+    <div class="c1">1</div>
+    <div class="c2">2</div>
+    <div class="c3">3</div>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unidades CSS</title>
+
+    <style>
+        /*
+          UNIDADES: 
+
+          => Absolutas:
+           - px, mm, cm .....
+
+          => ViewPort:
+           - vh, vw, vmin, vmax ......
+
+          => Font:
+           - em, rem .....
+        */
+
+        .unidades-absolutas{
+            position: absolute;
+            top: 150px;
+            font-size: 40px;
+            padding: 20px;
+            border: solid 5px #222222;
+            margin: 30px;
+            width: 4cm; /*pouco usado*/
+            height: 20mm; /*pouco usado*/
+            left: 200px;
+        }
+
+        .unidades-relativas{
+            position: absolute;
+            bottom: 5%;
+            right: 5%;
+            font-size: 4em;
+            padding: 5%;
+            border: solid 1vw #222;
+            margin: .8%;
+            width: 20vw;
+            height: 15vh;
+        }
+    </style>
+</head>
+<body>
+    <div class="unidades-absolutas">OPA!</div>
+    <div class="unidades-relativas">EPA!</div>
+</body>
+</html>

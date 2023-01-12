@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Overflow</title>
+
+    <style>
+        div{
+            font-size: 40px;
+            height: 100px;
+            width: 260px;
+            border: solid 5px black;
+
+            /*o elemento pode transbordas quando definimos uma largura ou altura fixa;*/
+
+            overflow: scroll;
+            overflow-x: scroll;
+
+            /*
+             a propriedade padrao do Overflow e 'Visible'
+
+             scroll => (rolar);
+             hidden => (esconder);
+             overflow-x => (transbordado horizontalmente);
+             overflow-y => (transbordado verticalmente);
+            */
+        }
+    </style>
+</head>
+<body>
+    <div>
+        tudoFuncionamuitoBemEmCSS
+        texto muito grande para caber nessa div.
+        ja pensou qual seria o comportamento padrao?
+    </div>
+</body>
+</html>

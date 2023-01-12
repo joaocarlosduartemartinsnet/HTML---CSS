@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Herança CSS</title>
+
+    <style>
+        body{
+            font-family: monospace;
+            font-size: 40px;
+            border: solid 3px blue;
+            padding: 10px;
+        }
+
+        div{
+            border: inherit;
+            padding: inherit;
+            /*
+            inherit -> significa que vc quer que o elemento div herde a borda e o padding do elemento body o pai
+            */
+        }
+
+
+        /*
+          embora nao tenha selecionado os elementos h1 e div, por estarem no body por herança,
+        receberam tais caracteristicas, a nao ser que chamemos os elementos de forma especifica para alteralos;
+
+          porem a borda e o padding entre outras propriedades especificas 
+        nao sao herdados pelos elementos filhos;
+
+        Conclusão: 
+         - propriedades comuns sao transmitidas por herança por padrao;
+         - ja outras mais especificas, temos que utilizar o 'inhert' para herdar caso seja nosso interesse; 
+
+        */
+    </style>
+</head>
+<body>
+    <h1>Herança</h1>
+    <div>Estou Herdando</div>
+</body>
+</html>
